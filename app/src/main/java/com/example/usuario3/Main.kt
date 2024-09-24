@@ -21,11 +21,17 @@ fun main() {
     println("Lista de usuarios:")
     listaUsuarios.mostrarLista()
 
-    // Eliminar un usuario
+    // Eliminar un usuario (por ejemplo, el usuario4)
     println("\nEliminando a Carlos Perez de la lista...")
     listaUsuarios.eliminarUsuario(usuario4)
 
     // Mostrar la lista de usuarios después de eliminar
     println("\nLista de usuarios después de eliminar:")
     listaUsuarios.mostrarLista()
+
+    // Filtrar usuarios mayores de una edad específica
+    val edadFiltro = 30
+    println("\nUsuarios mayores de $edadFiltro años:")
+    val usuariosMayores = listaUsuarios.filtrarPorEdad(edadFiltro)
+    listaUsuarios.mostrarListaFiltrada(usuariosMayores)
 }

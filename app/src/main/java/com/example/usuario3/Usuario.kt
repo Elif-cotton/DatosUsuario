@@ -1,6 +1,6 @@
 package com.example.usuario3
 
-class Usuario(private val nombre: String, private val edad: Int, private val trabajo: String?, private val referencia: Usuario?) {
+class Usuario(val nombre: String, val edad: Int, private val trabajo: String?, private val referencia: Usuario?) {
 
     // Función para mostrar los datos de un usuario
     fun mostrarDatos(): String {

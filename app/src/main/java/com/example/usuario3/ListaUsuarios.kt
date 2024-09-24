@@ -19,4 +19,16 @@ class ListaUsuarios {
             println(usuario.mostrarDatos())
         }
     }
+
+    // Función para filtrar usuarios por edad mayor a un número dado
+    fun filtrarPorEdad(edadMinima: Int): List<Usuario> {
+        return usuarios.filter { it.edad > edadMinima }
+    }
+
+    // Función para mostrar una lista filtrada de usuarios (nombre y edad)
+    fun mostrarListaFiltrada(usuariosFiltrados: List<Usuario>) {
+        for (usuario in usuariosFiltrados) {
+            println("${usuario.nombre} - ${usuario.edad} años")
+        }
+    }
 }
